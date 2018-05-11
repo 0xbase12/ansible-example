@@ -6,3 +6,8 @@
     apt:
       name: vim
       state: latest
+      
+  - name: ensure apache is at the latest version
+    apt:
+      name: nginx
+      state: latest
