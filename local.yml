@@ -6,7 +6,7 @@
     apt:
       name: lighttpd
       state: present
-  - name: Enable service lighttpd, and state should be started
+- name: Enable service lighttpd, and state should be started
     service:
       name: lighttpd
       enabled: yes
