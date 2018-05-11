@@ -1,9 +1,8 @@
 ---
-- hosts: all
-  remote_user: root
+- hosts: local
 
   tasks:
   - name: ensure apache is at the latest version
-    yum:
+    apt:
       name: httpd
       state: latest
