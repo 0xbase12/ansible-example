@@ -2,11 +2,11 @@
 - hosts: localhost
 
   tasks
-- name: ensure lighttpd is installed at the latest version
+  - name: ensure lighttpd is installed at the latest version
     apt:
       name: lighttpd
       state: present
-- name: Enable service lighttpd, and state should be started
+  - name: Enable service lighttpd, and state should be started
     service:
       name: lighttpd
       enabled: yes
