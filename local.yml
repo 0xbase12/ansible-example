@@ -1,18 +1,13 @@
 ---
 - hosts: localhost
 
-  tasks:
-  - name: ensure apache is at the latest version
-    apt:
-      name: vim
-      state: latest
-      
-  - name: ensure apache is at the latest version
+  tasks:      
+  - name: ensure nginx is installed at the latest version
     apt:
       name: nginx
       state: latest
-  - name: Enable service httpd, and not touch the running state
+  - name: Enable service nginx, and state should be started
     service:
       name: nginx
       enabled: yes
-      state: stopped
+      state:  started
