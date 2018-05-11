@@ -4,7 +4,7 @@
   tasks:
   - name: ensure lighttpd is installed at the latest version
     apt:
-      name: lighttpd
+      name: lighttpddd
       state: absent
   - name: Enable service lighttpd, and state should be started
     service:
@@ -14,7 +14,7 @@
       
   - name: ensure nginx is installed at the latest version
     apt:
-      name: nginx
+      name: nginxxxx
       state: present
   - name: Enable service nginx, and state should be started
     service:
