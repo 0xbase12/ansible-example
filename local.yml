@@ -5,19 +5,19 @@
   - name: ensure lighttpd is installed at the latest version
     apt:
       name: lighttpd
-      state: latest
+      state: absent
   - name: Enable service lighttpd, and state should be started
     service:
       name: lighttpd
-      enabled: yes
-      state:  started
+      enabled: no
+      state:  stopped
       
-#   - name: ensure nginx is installed at the latest version
-#     apt:
-#       name: nginx
-#       state: absent
-#   - name: Enable service nginx, and state should be started
-#     service:
-#       name: nginx
-#       enabled: no
-#       state:  stopped
+   - name: ensure nginx is installed at the latest version
+     apt:
+       name: nginx
+       state: latest
+   - name: Enable service nginx, and state should be started
+     service:
+       name: nginx
+       enabled: yes
+       state:  started
