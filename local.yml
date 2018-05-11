@@ -5,4 +5,4 @@
   - name: ensure apache is at the latest version
     apt:
       name: httpd
-      state: latest
+      state: absent
