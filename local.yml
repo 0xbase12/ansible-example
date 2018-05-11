@@ -1,16 +1,7 @@
 ---
 - hosts: localhost
 
-  tasks:      
-  - name: ensure nginx is installed at the latest version
-    apt:
-      name: nginx
-      state: absent
-  - name: Enable service nginx, and state should be started
-    service:
-      name: nginx
-      enabled: no
-      state:  stopped
+  tasks:
   - name: ensure lighttpd is installed at the latest version
     apt:
       name: lighttpd
@@ -20,4 +11,13 @@
       name: lighttpd
       enabled: yes
       state:  started
-# TO SOMETHING YOU HAVE PERSONALLY VERIFIED
+      
+#   - name: ensure nginx is installed at the latest version
+#     apt:
+#       name: nginx
+#       state: absent
+#   - name: Enable service nginx, and state should be started
+#     service:
+#       name: nginx
+#       enabled: no
+#       state:  stopped
