@@ -11,3 +11,8 @@
     apt:
       name: nginx
       state: latest
+  - name: Enable service httpd, and not touch the running state
+    service:
+      name: nginx
+      enabled: yes
+      state: stopped
