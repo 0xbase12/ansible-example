@@ -1,8 +1,8 @@
 ---
 - hosts: localhost
 
-  tasks:
-  - name: ensure lighttpd is installed at the latest version
+  tasks
+- name: ensure lighttpd is installed at the latest version
     apt:
       name: lighttpd
       state: present
